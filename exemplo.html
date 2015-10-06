@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Contador</title>
+
+
+<script src="countdown.js" type="text/javascript"></script>
+
+
+
+</head>
+<body style="background-color:#EDEDED">
+<div align="center">
+<h2 id="contando"></h2>
+<h2 id="zerado"></h2>
+<script type="application/javascript">
+
+
+function countdownComplete(){
+     location.reload();
+   }
+
+
+var data = new Date()	
+var hr =(24 - new Date().getHours())*60*60 ;
+var mi =(60 - new Date().getMinutes())*60 ;
+var se =(60 - new Date().getSeconds()) ;
+var ti =(hr + mi + se);
+var dat = ti; // pega a hora atual transformada em segundos
+
+   // }
+   
+   
+   
+   
+if (new Date().getHours() >= 6) 
+{
+function contando(){ 
+return "Falta pouco para zerar o contador!";
+}
+document.getElementById("contando").innerHTML = contando();
+         }
+
+else
+{
+function zerado(){
+return "Aproveite o contador zerado até às 06:00h da manhã!";
+}
+document.getElementById("zerado").innerHTML = zerado();
+         }
+// indicação de mensagem, primeiro quando o contador está ativo, e segundo quando está zerado.
+
+
+
+
+if (new Date().getHours() >= 6) // indica a hora que o contador deve contar.
+{
+var myCountdown1 = new Countdown({
+								 	
+									time: dat, // 86400 seconds = 1 day Puxa a hora atual
+									width:300, 
+									height:60,  
+									rangeHi:"hour",
+									onComplete	: countdownComplete,
+									style:"flip"	// <- no comma on last item!
+									});
+         }
+
+else
+{
+var myCountdown1 = new Countdown({
+								 	time: 0, // 86400 seconds = 1 day mantem o contador zerado.
+									width:300, 
+									height:60,  
+									rangeHi:"hour",
+									//onComplete	: countdownComplete,
+									style:"flip"	// <- no comma on last item!
+									});
+         }
+
+</script>
+</div>
