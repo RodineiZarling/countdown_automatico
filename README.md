@@ -1,5 +1,5 @@
 # countdown_automatico
-Contador reguresivo automático. Configurado para contador diário. Inicia a contagem em determinado horário, e conta a até chegar na hora estipulada, logo zera, e permanece assim até novamente atingir o horário permitido para contagem.
+Contador regressivo automático. Configurado para contador diário. Inicia a contagem em determinado horário, e conta a até chegar na hora estipulada, logo zera, e permanece assim até novamente atingir o horário permitido para contagem.
 
 Exemplo do contador.
 
